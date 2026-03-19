@@ -1,0 +1,27 @@
+* {
+    margin: 0%;
+    padding: 0%
+}
+
+/* display block (padrao) */
+.pai {
+    width: 100%;
+    padding: 20px;
+    background-color: cadetblue;
+    display: flex;
+    /* row linha */
+    /* column coluna */
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*star - esquerda */
+    /* end - direita  */
+    /* center - centro */
+    /* space-between/around - separar centralizado */
+}
+
+.filho {
+    padding: 30px;
+    margin: 10px 0px;
+    background-color: blueviolet;
+}
