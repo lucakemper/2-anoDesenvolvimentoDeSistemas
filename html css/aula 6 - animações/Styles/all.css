@@ -1,4 +1,18 @@
 *{
     padding: 0%;
-    mar
+    margin: 0%;
 }
+
+:root{
+    --corPrimaria:#d8d416;
+    --corSegundaria:#0fc90f;
+   --corLink:#d3530e;
+   --corTexto:#000000; 
+}
+
+header{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: var(--corprimaria);
+}
+
