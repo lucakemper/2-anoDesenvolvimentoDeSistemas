@@ -1,0 +1,118 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(80, 80, 80);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ESTILO DO FORMULÁRIO */
+form {
+    padding: 25px;
+    background-color: rgb(33, 32, 34);
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 450px;
+    color: white; /* Melhor legibilidade no fundo escuro */
+}
+
+#renda {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#salario {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.formSalario {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* ESTILO DOS INPUTS E LABELS */
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.formSalario input {
+    padding: 10px;
+    border: 2px solid rgb(73, 64, 64);
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.formSalario input:focus {
+    border-color: #ffcc00;
+}
+
+/* ESTILO DA TABELA (FEEDBACK) */
+.tabela-feedback {
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.tabela-feedback h5 {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tabela-feedback h5:last-child {
+    border-bottom: none;
+}
+
+.tabela-feedback h5 span {
+    width: 48%;
+}
+
+/* BOTÃO */
+button {
+    padding: 12px;
+    background-color: #ffcc00;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e6b800;
+    transform: scale(1.02);
+}
+
+/* RESULTADO */
+#resultado {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    min-height: 25px;
+    margin-top: 5px;
+}

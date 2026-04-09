@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Salário-Família</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <div id="renda">
+        <form id="formSalarioFamilia">
+            <img id="salario" src="images/salario-familia.jpg" alt="salario">
+
+            <div class="formSalario">
+                <label for="empregado">Empregado:</label>
+                <input id="empregado" type="text" placeholder="Nome do empregado" required>
+            </div>
+
+            <div class="formSalario">
+                <label for="filhos">Nº de filhos (menores de 14 ou inválidos):</label>
+                <input id="filhos" type="number" placeholder="Quantidade" required>
+            </div>
+
+            <div class="formSalario">
+                <label for="contribuicao">Salário-Contribuição:</label>
+                <input id="contribuicao" type="number" step="0.01" placeholder="Valor em R$" required>
+            </div>
+
+            <div class="formSalario tabela-feedback">
+                <h5><span>Salário-Contribuição</span> <span>Cota</span></h5>
+                <h5><span>Até R$ 806,80</span><span>R$ 41,37</span></h5>
+                <h5><span>R$ 806,81 a R$ 1.210,25</span><span>R$ 29,16</span></h5>
+                <h5><span>Mais de R$ 1.210,25</span><span>Sem direito</span></h5>
+            </div>
+
+            <button type="submit">CALCULAR</button>
+
+            <div id="resultado"></div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('formSalarioFamilia');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('empregado').value;
+            const filhos = parseInt(document.getElementById('filhos').value);
+            const renda = parseFloat(document.getElementById('contribuicao').value);
+            const display = document.getElementById('resultado');
+            
+            let cota = 0;
+
+            if (renda <= 806.80) {
+                cota = 41.37;
+            } else if (renda <= 1210.25) {
+                cota = 29.16;
+            } else {
+                cota = 0;
+            }
+
+            const total = cota * filhos;
+
+            if (cota > 0) {
+                display.innerHTML = `<p>${nome}, o total é: <strong>R$ ${total.toFixed(2)}</strong></p>`;
+                display.style.color = "#4cff4c";
+            } else {
+                display.innerHTML = `<p>${nome}, você não tem direito à cota.</p>`;
+                display.style.color = "#ff4c4c";
+            }
+        });
+    </script>
+</body>
+
+</html>
