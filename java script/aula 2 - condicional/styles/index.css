@@ -1,0 +1,111 @@
+/* Configurações Gerais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f0f0f; /* Fundo escuro estilo jogo */
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container Principal */
+main {
+    background-color: #1a1a1a;
+    width: 350px;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Área da Ficha (Injetada pelo JS) */
+#ficha {
+    margin-bottom: 20px;
+}
+
+#icone {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid #e74c3c; /* Borda vermelha para destaque */
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.3);
+}
+
+#ficha h1 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #f1c40f; /* Cor dourada para o nome */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#ficha p {
+    font-size: 18px;
+    margin: 8px 0;
+    background: #252525;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #e74c3c;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilização dos Botões */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+/* Botão de Vida */
+#vida {
+    background-color: #c0392b;
+}
+
+#vida:hover {
+    background-color: #e74c3c;
+    transform: scale(1.02);
+}
+
+/* Botão de Dinheiro */
+#moeda {
+    background-color: #27ae60;
+}
+
+#moeda:hover {
+    background-color: #2ecc71;
+    transform: scale(1.02);
+}
+
+/* Botão de Dano */
+#dano {
+    background-color: #2980b9;
+}
+
+#dano:hover {
+    background-color: #3498db;
+    transform: scale(1.02);
+}
+
+/* Feedback de clique */
+button:active {
+    transform: scale(0.98);
+}
