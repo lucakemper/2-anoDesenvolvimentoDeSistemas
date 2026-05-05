@@ -1,0 +1,46 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-image: url(https://thumbs.dreamstime.com/b/ilustra%C3%A7%C3%A3o-do-vetor-de-padr%C3%A3o-sem-descontinuidades-desenho-matinal-chocolate-quente-um-croissant-e-rolo-manual-groselha-187516507.jpg);
+}
+
+main{
+    width: 60%;
+    margin: 0px auto;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#produtos{
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 10px 10px 10px rgb();
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.produto{
+    width: 300px;
+    border: 3px solid rgb(17, 80, 134);
+    background-color: rgb(145, 182, 214);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+}
+
+.produto img{
+    width: 100%;
+}
